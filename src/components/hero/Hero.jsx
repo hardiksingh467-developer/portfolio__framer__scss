@@ -1,10 +1,20 @@
-import { animate } from "framer-motion";
+
 import "./hero.scss";
 import { motion } from "framer-motion";
 
 const textVariants = {
-    initial: { x: -500, opacity: 0 },
-    animate: { x: 0, opacity: 1, transition: { duration : 1, staggerChildren: 0.1} },
+    initial: { 
+        x: -500, 
+        opacity: 0 
+    },
+    animate: { 
+        x: 0, 
+        opacity: 1, 
+        transition: { 
+            duration : 1, 
+            staggerChildren: 0.1
+        } 
+    },
     scrollButton: {
         opacity: 0,
         y: 10,
@@ -16,17 +26,26 @@ const textVariants = {
 }
 
 const sliderVariants = {
-    initial: { x: 0, opacity: 0 },
-    animate: { x: "-220%", transition: { duration : 20, repeat: Infinity} },
-    scrollButton: {
-        opacity: 0,
-        y: 10,
-        transition: {
-            duration: 0.5,
+    initial: { 
+        x: 0 
+    },
+    animate: { 
+        x: "-220%", 
+        transition: { 
             repeat: Infinity,
-            repeatType: "mirror"
-        }
-    }
+            repeatType: "mirror",
+            duration : 20
+        } 
+    },
+    // scrollButton: {
+    //     opacity: 0,
+    //     y: 10,
+    //     transition: {
+    //         duration: 0.5,
+    //         repeat: Infinity,
+    //         repeatType: "mirror"
+    //     }
+    // }
 }
 
 const Hero = () => {

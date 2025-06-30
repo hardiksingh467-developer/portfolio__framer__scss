@@ -12,23 +12,34 @@ const App = () => {
     <div>
       <Cursor />
       {/* <section><Test /></section> */}
+
+      {/* If you do not design mobile first then you should comment components and make single component responsive at a time */}
+      
       <section id="homepage">
         <Navbar />
         <Hero />
-        </section>
-      <section id="services"><Parallax type="services" /></section>
-      <section><Services /></section>
-      <section id="portfolio"><Parallax type="portfolio" /></section>
-      <Portfolio />
-      {/* 
-      <section>Portfolio1</section>
-      <section>Portfolio2</section>
-      <section>Portfolio3</section>
-       */}
-      <section id="contact"><Contact /></section>
+      </section>
       
+      <section id="services">
+        <Parallax type="services" />
+      </section>
+      
+      {/* <section>
+        <Services />
+      </section> */}
+      
+      {/* <section id="portfolio">
+        <Parallax type="portfolio" />
+      </section> */}
+      
+      {/* <Portfolio /> */}
+      
+      {/* <section id="contact">
+        <Contact />
+      </section> */}
+    
     </div>
-  )
+  );
 };
 
 export default App;

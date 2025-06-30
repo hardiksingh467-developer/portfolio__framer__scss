@@ -21,7 +21,7 @@ const Services = () => {
             <p>
                 I focus on building scalable Microservices
                 <br />
-                based on Sockets and REST API's using 
+                based on Sockets and REST API&apos;s using 
                 <br />
                 <span> Node.js</span>, and
                 <span> Express.js</span>,
@@ -46,7 +46,7 @@ const Services = () => {
                     Business
                 </h1>
                 <button>
-                    WHAT WE DO
+                    WHAT I DO
                 </button>
             </div>
         </motion.div>
