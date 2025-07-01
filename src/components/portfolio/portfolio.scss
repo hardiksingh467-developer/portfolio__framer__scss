@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .portfolio{
     position: relative;
     .progress{
@@ -8,6 +10,11 @@
         text-align: center;
         color: orange;
         font-size: 36px;
+
+        @include mobile{
+            padding-top: calc(100vh - 100px);
+            font-size: 24px;
+        }
 
         .progressBar{
             height: 10px;
