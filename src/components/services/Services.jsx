@@ -10,13 +10,16 @@ const Services = () => {
     const ref = useRef();
 
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isMobile = window.innerWidth <= 768;
     // The `once: true` option ensures that the animation only plays once when the element comes into view.
   return (
     <motion.div className='services' variants={variants} initial="initial" 
     // animate="animate" 
     // whileInView="animate" 
-    animate={isInView && "animate"} 
-    ref={ref}>
+    // animate={isInView && "animate"} 
+    animate={isMobile ? "animate" : isInView ? "animate" : "initial"}
+    ref={ref}
+    >
         <motion.div className="textContainer" variants={variants}>
             <p>
                 I focus on building scalable Microservices
