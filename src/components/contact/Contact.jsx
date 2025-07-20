@@ -29,13 +29,13 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   // env variables for emailJS
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  // const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  // const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  // const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
-  // const publicKey = "CxZuqBemxKOoqLWHr";
-  // const serviceId = "service_h1wr0ji";
-  // const templateId = "template_x37m0q9";
+  const publicKey = "CxZuqBemxKOoqLWHr";
+  const serviceId = "service_h1wr0ji";
+  const templateId = "template_x37m0q9";
 
   const sendEmail = (e) => {
     e.preventDefault();

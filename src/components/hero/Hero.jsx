@@ -121,7 +121,7 @@ const Hero = () => {
         Middleware Database Controller Repo
       </motion.div>
       <div className="imageContainer">
-        <img src="./hero.png" alt="alternate hero image" />
+        <img src="./hero__image__three.png" alt="alternate hero image" />
       </div>
     </div>
   );
