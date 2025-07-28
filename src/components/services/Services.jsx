@@ -9,6 +9,20 @@ const variants = {
 const Services = () => {
     const ref = useRef();
 
+    const items = [
+        { title: "Full-Stack Web Development", description: "Build scalable apps using MERN stack, combining powerful backend services with seamless frontend UIs." },
+        { title: "Backend Microservices", description: "Design REST APIs with Node.js, Express, and Kafka, implementing role-based access control and clean service architecture." },
+        { title: " Frontend Engineering", description: "Develop fast, responsive UIs using React, Redux, and Tailwind. Optimize performance through lazy loading and image compression." },
+        { title: "Real-Time Communication", description: "Specialized in WebRTC: built custom video call apps with MongoDB and MySQL support for real-time, peer-to-peer connections." },
+    ]
+
+    const handleScroll = (targetId) => {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     const isInView = useInView(ref, { once: true, margin: "-100px" });
     const isMobile = window.innerWidth <= 768;
     // The `once: true` option ensures that the animation only plays once when the element comes into view.
@@ -54,13 +68,14 @@ const Services = () => {
             </div>
         </motion.div>
         <motion.div className="listContainer" variants={variants}>
-            {Array.from({ length: 4 }).map((_, index) => (
+            {items.map((item, index) => (
                 <motion.div whileHover={{ background:"lightgray", color: "black"}} key={index} className="box">
-                <h2>Branding</h2>
+                <h2>{item.title}</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum consequatur, deleniti quis dolorum nesciunt asperiores fuga eum voluptatem porro, architecto atque. In, nesciunt fugit!
+                    {item.description}
                 </p>
-                <button>Go</button>
+                {/* send to contact us */}
+                <button onClick={() => handleScroll("contact")}>Go</button>
             </motion.div>
             ))}
         </motion.div>

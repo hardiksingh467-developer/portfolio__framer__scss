@@ -94,7 +94,7 @@ const Hero = () => {
               See the Latest Works
             </motion.button>
             <motion.button
-              onClick={() => handleScroll("services")}
+              onClick={() => handleScroll("contact")}
               variants={textVariants}
               className="buttonsScroller"
             >

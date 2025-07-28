@@ -5,24 +5,27 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "Project 1",
+    title: "WebRTC Video Calling App",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi optio incidunt laboriosam mollitia odit possimus ad molestiae quasi vel veritatis esse, repellat blanditiis, accusamus deleniti cumque impedit cupiditate eum in et earum fugit ex?",
-    img: "https://images.pexels.com/photos/159045/the-interior-of-the-repair-interior-design-159045.jpeg",
+      "A real-time video calling application built using WebRTC, React, Node.js, and Socket.IO. Supports peer-to-peer communication with video, audio, and text chat functionality. Ideal for one-to-one meetings, interviews, or virtual hangouts.",
+    img: "./Screenshot (44).png",
+    link: "https://webrtc-frontend-c7so.onrender.com/",
   },
   {
     id: 2,
-    title: "Project 2",
+    title: "Google Docs Clone",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi optio incidunt laboriosam mollitia odit possimus ad molestiae quasi vel veritatis esse, repellat blanditiis, accusamus deleniti cumque impedit cupiditate eum in et earum fugit ex?",
-    img: "https://images.pexels.com/photos/159045/the-interior-of-the-repair-interior-design-159045.jpeg",
+      "A collaborative text editor inspired by Google Docs, developed using React, Node.js, Express, and WebSocket. Enables multiple users to edit the same document in real-time with persistent storage via MongoDB.",
+    img: "./Screenshot (47).png",
+    link: "https://google-docs-frontend.onrender.com/",
   },
   {
     id: 3,
-    title: "Project 3",
+    title: "E-commerce Platform",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi optio incidunt laboriosam mollitia odit possimus ad molestiae quasi vel veritatis esse, repellat blanditiis, accusamus deleniti cumque impedit cupiditate eum in et earum fugit ex?",
-    img: "https://images.pexels.com/photos/159045/the-interior-of-the-repair-interior-design-159045.jpeg",
+      "A fully-featured e-commerce platform allowing users to browse, search, and purchase products. Includes user authentication, product management, and order tracking. Built with MERN stack and integrated with Stripe for secure payments.",
+    img: "./Screenshot (48).png",
+    link: "https://ecommerce-clone-frontend-pvh7.onrender.com/",
   },
 ];
 
@@ -41,7 +44,9 @@ const Single = ({ item }) => {
           <div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.description}</p>
-            <button>See Demo</button>
+            <a href={item.link} target="_blank">
+              <button>See Demo</button>
+            </a>
           </div>
         </div>
       </div>
